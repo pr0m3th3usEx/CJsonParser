@@ -106,15 +106,15 @@ coverage:
 	gcovr -r . --exclude tests/ --branches
 
 .PHONY	=	clean
-clean:	$(LIB_OBJ) $(UT_OBJ)
+clean:
 	$(RM) $(LIB_OBJ)
 	$(RM) $(UT_OBJ)
+	@find . -name "*.gcno" -delete -o -name "*.gcda" -delete
 
 .PHONY	=	fclean
 fclean: clean
 	@$(RM) $(LIB_NAME)
 	@$(RM) $(UT_NAME)
-	@find . -name "*.gcno" -delete -o -name "*.gcda" -delete
 
 .PHONY	=	re
 re: fclean install
