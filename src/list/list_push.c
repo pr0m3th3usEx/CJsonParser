@@ -18,6 +18,6 @@ void list_push(list_t **head, void *element, char *tag)
         return;
     n_element->element = element;
     n_element->next = *head;
-    n_element->tag = (!tag) ? NULL : m_strdup(tag);
+    n_element->tag = (!tag) ? NULL : strdup(tag);
     *head = n_element;
 }

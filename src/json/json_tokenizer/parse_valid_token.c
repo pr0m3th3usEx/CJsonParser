@@ -14,5 +14,5 @@ void parse_valid_token(json_tokenizer_t *tokenizer, bool *got, char const *test)
         *got = false;
         return;
     }
-    tokenizer->token_length = m_strlen(test);
+    tokenizer->token_length = strlen(test);
 }
