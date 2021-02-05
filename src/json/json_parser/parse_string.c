@@ -11,7 +11,7 @@ char *get_key(json_tokenizer_t *tokenizer, char *key)
 {
     unsigned int i = 0;
 
-    m_memset(key, '\0', 255);
+    memset(key, '\0', 255);
     if (tokenizer->token_type != J_STRING_TOKEN)
         return NULL;
     for (i = 1; i <= tokenizer->token_length; i++)

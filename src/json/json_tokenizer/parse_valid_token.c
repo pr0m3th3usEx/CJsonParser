@@ -9,8 +9,8 @@
 
 void parse_valid_token(json_tokenizer_t *tokenizer, bool *got, char const *test)
 {
-    if (m_strncmp(tokenizer->buffer->str + tokenizer->data_position,
-    test, m_strlen(test)) != 0) {
+    if (strncmp(tokenizer->buffer->str + tokenizer->data_position,
+    test, strlen(test)) != 0) {
         *got = false;
         return;
     }

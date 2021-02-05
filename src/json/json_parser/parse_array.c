@@ -15,8 +15,7 @@ json_type_e type_data, int *status)
     CHECK_CORRUPTED(*status)
     result->value.array.length = list_get_length(ele);
     result->value.array.type = type_data;
-    result->value.array.arr = malloc(sizeof(json_value_t) *
-    (result->value.array.length + 1));
+    result->value.array.arr = malloc(sizeof(json_value_t) * (result->value.array.length + 1));
     CHECK_MALLOC(result->value.array.arr);
     for (int i = 0; i < result->value.array.length; i++) {
         result->value.array.arr[i] = ele->element;

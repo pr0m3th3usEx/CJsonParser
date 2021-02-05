@@ -18,7 +18,6 @@ json_value_t *parse_number(json_tokenizer_t *tokenizer, int *status)
         *status = EXEC_FAIL;
         return NULL;
     }
-    result->value.number = m_getnbr(tokenizer->buffer->str +
-    tokenizer->data_position);
+    result->value.number = atoi(tokenizer->buffer->str + tokenizer->data_position);
     return result;
 }

@@ -17,6 +17,6 @@ json_value_t *create_json_value(json_type_e type)
     value->value.obj = NULL;
     value->value.boolean = false;
     value->value.nothing = NULL;
-    m_memset(value->value.string, '\0', 255);
+    memset(value->value.string, '\0', 255);
     return value;
 }

@@ -9,7 +9,7 @@
 
 int json_parse(char const *str, json_value_t **obj)
 {
-    data_buffer_t buffer = {str, m_strlen(str)};
+    data_buffer_t buffer = {str, strlen(str)};
     json_tokenizer_t tokenizer = init_tokenizer(&buffer);
     int status = EXEC_SUCCESS;
 
