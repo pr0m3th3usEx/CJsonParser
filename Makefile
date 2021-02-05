@@ -85,7 +85,8 @@ install:
 tests_run:	CFLAGS	+=	--coverage
 tests_run:	LDFLAGS	+=	-lcriterion
 tests_run:	$(UT_OBJ) $(LIB_OBJ)
-	gcc $(CPPFLAGS) $(CFLAGS) -o $(UT_NAME) $(UT_OBJ) $(LIB_OBJ) $(LDFLAGS)
+	@gcc $(CPPFLAGS) $(CFLAGS) -o $(UT_NAME) $(UT_OBJ) $(LIB_OBJ) $(LDFLAGS)
+	@./$(UT_NAME)
 
 .PHONY	=	coverage
 coverage:
