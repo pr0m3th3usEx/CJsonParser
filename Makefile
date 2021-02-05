@@ -94,8 +94,9 @@ coverage:
 	gcovr -r . --exclude tests/ --branches
 
 .PHONY	=	clean
-clean:	$(LIB_OBJ)
+clean:	$(LIB_OBJ) $(UT_OBJ)
 	$(RM) $(LIB_OBJ)
+	$(RM) $(UT_OBJ)
 
 .PHONY	=	fclean
 fclean: clean
