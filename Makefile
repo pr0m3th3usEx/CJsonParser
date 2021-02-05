@@ -10,6 +10,11 @@ DEBUG_FLAGS			:=	-g3
 
 VERSION				:=	1.0.0
 
+INC_PATH			:=	/usr/include/cjson
+
+INC_FILES			:=	include/json_parser.h												\
+						include/list.h
+
 RM					:=	rm -f
 
 LIB_SRC				:= 	src/list/list_change.c												\
@@ -48,7 +53,7 @@ LIB_SRC				:= 	src/list/list_change.c												\
 						src/json/json_value/json_get_from_object/json_object_get_part_2.c
 
 LIB_OBJ				=	$(LIB_SRC:.c=.o)
-LIB_NAME			:=	libc_json.so
+LIB_NAME			:=	libcjson.so
 
 UT_SRC				:=	tests/eat_test.c													\
 						tests/next_token_test.c												\
@@ -75,11 +80,18 @@ all:
 	@echo 'Use "make install" the library and header files'
 
 .PHONY	=	install
-install:
-	@echo "[+] Criterion dependency"
-	@./install_criterion.sh
-	@echo "[+] Gcovr dependency"
-	@apt install gcovr
+install: $(LIB_OBJ)
+	# @echo "[+] Criterion dependency"
+	# @./install_criterion.sh
+	# @echo "[+] Gcovr dependency"
+	# @apt install gcovr
+	@gcc $(CPPFLAGS) -shared $(CFLAGS) -o $(LIB_NAME) $(LIB_OBJ)
+	@echo "[+] Shared Library libc_json.so created"
+	@cp $(LIB_NAME)	/usr/lib
+	@echo "[+] Added $(LIB_NAME) into /usr/lib"
+	@mkdir -p $(INC_PATH)
+	@cp $(INC_FILES) $(INC_PATH)
+	@echo "[+] $(INC_FILES) pasted into $(INC_PATH)"
 
 .PHONY	=	tests_run
 tests_run:	CFLAGS	+=	--coverage

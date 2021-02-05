@@ -156,50 +156,50 @@ typedef struct link_type_func {
     void *(*func)(json_value_t *);
 } link_func_t;
 
-json_tokenizer_t init_tokenizer(data_buffer_t *buffer);
-void skip_white_space(json_tokenizer_t *tokenizer);
-int eat_comma(json_tokenizer_t *tokenizer);
-int eat_colon(json_tokenizer_t *tokenizer);
-void next_token(json_tokenizer_t *tokenizer);
-bool has_more_tokens(json_tokenizer_t *tokenizer);
-void parse_token(json_tokenizer_t *tokenizer, int *status);
-void parse_string_token(json_tokenizer_t *tokenizer);
-void parse_number_token(json_tokenizer_t *tokenizer);
-void parse_valid_token(json_tokenizer_t *tokenizer, bool *got, char const *t);
-char *get_key(json_tokenizer_t *tokenizer, char *key);
+extern json_tokenizer_t init_tokenizer(data_buffer_t *buffer);
+extern void skip_white_space(json_tokenizer_t *tokenizer);
+extern int eat_comma(json_tokenizer_t *tokenizer);
+extern int eat_colon(json_tokenizer_t *tokenizer);
+extern void next_token(json_tokenizer_t *tokenizer);
+extern bool has_more_tokens(json_tokenizer_t *tokenizer);
+extern void parse_token(json_tokenizer_t *tokenizer, int *status);
+extern void parse_string_token(json_tokenizer_t *tokenizer);
+extern void parse_number_token(json_tokenizer_t *tokenizer);
+extern void parse_valid_token(json_tokenizer_t *tokenizer, bool *got, char const *t);
+extern char *get_key(json_tokenizer_t *tokenizer, char *key);
 
-int json_parse(char const *str, json_value_t **obj);
-json_value_t *json_parse_value(json_tokenizer_t *tokenizer, int *status);
-json_value_t *create_json_value(json_type_e type);
-void destroy_json_value(json_value_t *value);
-void get_next_token(json_tokenizer_t *tokenizer, int *status);
-json_object_t *get_json_object(json_value_t *v);
-void *get_null_value(json_value_t *v);
-json_array_t get_array_value(json_value_t *v);
-int get_int_value(json_value_t *v);
-bool get_bool_value(json_value_t *v);
-char const *get_string_value(json_value_t *v);
+extern int json_parse(char const *str, json_value_t **obj);
+extern json_value_t *json_parse_value(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *create_json_value(json_type_e type);
+extern void destroy_json_value(json_value_t *value);
+extern void get_next_token(json_tokenizer_t *tokenizer, int *status);
+extern json_object_t *get_json_object(json_value_t *v);
+extern void *get_null_value(json_value_t *v);
+extern json_array_t get_array_value(json_value_t *v);
+extern int get_int_value(json_value_t *v);
+extern bool get_bool_value(json_value_t *v);
+extern char const *get_string_value(json_value_t *v);
 
-json_value_t *parse_object(json_tokenizer_t *tokenizer, int *status);
-json_value_t *parse_array(json_tokenizer_t *tokenizer, int *status);
-json_value_t *parse_bool(json_tokenizer_t *tokenizer, int *status);
-json_value_t *parse_null(json_tokenizer_t *tokenizer, int *status);
-json_value_t *parse_number(json_tokenizer_t *tokenizer, int *status);
-json_value_t *parse_string(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_object(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_array(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_bool(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_null(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_number(json_tokenizer_t *tokenizer, int *status);
+extern json_value_t *parse_string(json_tokenizer_t *tokenizer, int *status);
 
-int json_object_get_int(json_object_t *obj, char const *tag);
-bool json_object_get_bool(json_object_t *obj, char const *tag);
-char const *json_object_get_str(json_object_t *obj, char const *tag);
-json_object_t *json_object_get_object(json_object_t *obj, char const *tag);
-void *json_object_get_null(json_object_t *obj, char const *tag);
-json_array_t json_object_get_array(json_object_t *obj, char const *tag);
+extern int json_object_get_int(json_object_t *obj, char const *tag);
+extern bool json_object_get_bool(json_object_t *obj, char const *tag);
+extern char const *json_object_get_str(json_object_t *obj, char const *tag);
+extern json_object_t *json_object_get_object(json_object_t *obj, char const *tag);
+extern void *json_object_get_null(json_object_t *obj, char const *tag);
+extern json_array_t json_object_get_array(json_object_t *obj, char const *tag);
 
-int json_array_get_int(json_array_t *array, int index);
-char const *json_array_get_str(json_array_t *array, int index);
-bool json_array_get_bool(json_array_t *array, int index);
-json_object_t *json_array_get_object(json_array_t *array, int index);
+extern int json_array_get_int(json_array_t *array, int index);
+extern char const *json_array_get_str(json_array_t *array, int index);
+extern bool json_array_get_bool(json_array_t *array, int index);
+extern json_object_t *json_array_get_object(json_array_t *array, int index);
 
-json_value_t *get_json_from_file(char const *jsonpath, bool minified);
+extern json_value_t *get_json_from_file(char const *jsonpath, bool minified);
 
 static const link_type_t LINK_TYPES[] = {
     {'{', J_CURLY_BRACKET_L},
