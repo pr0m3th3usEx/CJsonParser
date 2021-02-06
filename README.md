@@ -13,6 +13,7 @@ The latest version of the library gives you the possibility to
 - Parse an serialized JSON array (with `json_array_t` type)
 - Parse an serialized JSON object (with `json_object_t` type)
 - Get any element with key correspondance using macros (`J_GET_INT`, `J_GET_STR`, `J_GET_BOOL`, `J_GET_NULL`, `J_GET_OBJ`, `J_GET_ARRAY`)
+- Error handling when the JSON string to be parsed is corrupted
 
 
 ## Installation
