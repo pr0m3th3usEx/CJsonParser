@@ -1,2 +1,2 @@
-# json_parser
+# CJSONParser
 Simple JSON parser implemented in C
