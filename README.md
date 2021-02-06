@@ -7,7 +7,6 @@ Motivated by an educational purpose, I decided to create a C implementation of a
 
 
 ## Features available
--------------------
 
 The latest version of the project is 
 
@@ -25,18 +24,15 @@ $ sudo make install
 ```
 
 ## How to use ?
--------------------
 
 The library gives 2 header files:
 - `cjson/json_parser.h` : All JSON parsing tools
 - `cjson/list.h` : Linked list operations
 
 ## License
--------------------
 
 The project is under MIT License.
 
 ## Contributors
--------------------
 
 @Pr0m3th3usEx - Thomas Michel
