@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2019
-** File description:
-** parse_string_token.c
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include "json_parser.h"

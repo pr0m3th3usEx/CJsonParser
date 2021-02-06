@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2020
-** lib list
-** File description:
-** list reverse
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include <stdlib.h>

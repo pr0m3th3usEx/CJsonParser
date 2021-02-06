@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
-** Runner
-** File description:
-** list_destroy.c
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include <stdlib.h>

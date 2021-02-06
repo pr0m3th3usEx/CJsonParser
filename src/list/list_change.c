@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
-** PSU_tetris_2019
-** File description:
-** list_change.c
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include <stdlib.h>

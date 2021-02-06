@@ -1,9 +1,7 @@
 /*
-** EPITECH PROJECT, 2019
-** MUL_my_rpg_2019
-** File description:
-** get_json_from_file.c
+** PR0M3TH3USEX PROJECT, 2019
 */
+
 
 #include "json_parser.h"
 

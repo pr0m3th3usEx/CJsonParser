@@ -3,7 +3,7 @@
 */
 
 #ifndef _PR0METH3USEX_JSON_PARSER_H
-#define _PR0METH3USEXJSON_PARSER_H
+#define _PR0METH3USEX_JSON_PARSER_H
 
 #include <stdlib.h>
 #include <stdbool.h>

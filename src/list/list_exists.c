@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
-** CPE_lemin_2019
-** File description:
-** list_exists.c
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include "list.h"

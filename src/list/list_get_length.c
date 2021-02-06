@@ -1,8 +1,5 @@
 /*
-** EPITECH PROJECT, 2020
-** PSU_my_ls_2019
-** File description:
-** list_get_length.c
+** PR0M3TH3USEX PROJECT, 2019
 */
 
 #include <stdlib.h>
