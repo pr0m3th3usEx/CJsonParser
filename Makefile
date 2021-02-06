@@ -77,14 +77,10 @@ all:
 	@echo "  C JSON PARSER v$(VERSION) - by Pr0m3th3usEx"
 	@echo "###########################################"
 	@echo ""
-	@echo 'Use "make install" the library and header files'
+	@echo 'Use "sudo make install" the library and header files'
 
 .PHONY	=	install
 install: $(LIB_OBJ)
-	# @echo "[+] Criterion dependency"
-	# @./install_criterion.sh
-	# @echo "[+] Gcovr dependency"
-	# @apt install gcovr
 	@gcc $(CPPFLAGS) -shared $(CFLAGS) -o $(LIB_NAME) $(LIB_OBJ)
 	@echo "[+] Shared Library libc_json.so created"
 	@cp $(LIB_NAME)	/usr/lib
