@@ -34,7 +34,7 @@ The library gives 2 header files:
 
 ## Full example
 
-Todo
+*TODO*
 
 ## License
 
